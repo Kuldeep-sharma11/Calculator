@@ -1,0 +1,23 @@
+body{
+    align-items: center;
+}
+.cal{
+    border: 10px rgb(221, 12, 12);
+    border-radius: 10px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+#display{
+    height: 30px;  
+    color: blue;
+}
+.button-container{
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    width: 41px;
+    height: 40px;
+    color: red;
+}

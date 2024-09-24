@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Cricket </title>
+</head>
+<body>
+    <h1> This is the Cricket game of between You and Computer </h1>
+     <!-- This is the Bat Area -->
+    <button onclick=" generate();
+
+    if(computerChoice === 'Ball'){
+        score.win++;
+        result = (' You Won. ');
+    }else if (computerChoice === 'Bat') {
+        score.tie++;
+        result = (' It is a tied Match .')  
+    }else{
+        score.lost++;
+        result = (' Computer Won.')
+    }
+    alert(`You have chosen Bat .  Computer Choice is ${computerChoice}  and  ${result}`);
+
+    "> Bat </button>
+    
+    <!-- This is the Ball Area -->
+    
+    <button onclick=" generate();
+
+    if(computerChoice === 'Bat'){
+        score.lost++;
+        result = (' Computer Won . ');
+    }else if (computerChoice === 'Ball') {
+        score.tie++;
+        result = (' It is a tied Match. ');  
+    }else{
+        score.win++;
+        result = (' You Won .');
+    }
+    alert(`You have chosen Ball .  Computer Choice is ${computerChoice}  and  ${result}`);
+     "> Ball</button>
+
+ <!-- This is the stump Area -->
+ 
+<button onclick=" generate();
+
+if(computerChoice === 'Bat'){
+    score.win++;
+    result = (' You Won . ');
+}else if (computerChoice === 'Stump') {
+    score.tie++
+    result = (' It is a tied Match. ');  
+}else{
+    score.lost++;
+    result = (' Computer Won .');
+}
+alert(`You have chosen Stump .  Computer Choice is ${computerChoice}  and  ${result}`);
+ "> Stumps </button>
+
+
+<script>
+
+    let score ={
+        win:0,
+        lost:0,
+        tie:0,
+    };
+
+
+    let computerChoice;
+    let result;
+    function generate() {
+        console.log(score);
+    let random = Math.random()*3;
+
+    if(random > 0 && random <= 1){
+         computerChoice = 'Bat';
+    }else if (random > 1 && random <= 2){
+        computerChoice = 'Ball';
+    }else{
+       computerChoice = 'Stump'
+     }
+        
+    }
+
+</script>
+    
+</body>
+</html>
